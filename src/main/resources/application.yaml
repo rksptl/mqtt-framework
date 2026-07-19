@@ -3,7 +3,7 @@ spring:
         name: mqtt-framework
 
 mqtt:
-    enabled: true
+    enabled: false
     broker-url: tcp://localhost:31884
     client-id: test-client
     username:
