@@ -9,7 +9,7 @@
 		<version>3.5.6</version>
 		<relativePath />
 	</parent>
-	<groupId>com.rkp.framework</groupId>
+	<groupId>io.github.rksptl</groupId>
 	<artifactId>mqtt-framework</artifactId>
 
 	<version>1.0.0</version>
