@@ -11,25 +11,69 @@
 	</parent>
 	<groupId>io.github.rksptl</groupId>
 	<artifactId>mqtt-framework</artifactId>
-
 	<version>1.0.0</version>
-	<name />
-	<description />
-	<url />
+	<name>MQTT Framework</name>
+	<description>
+		Enterprise-grade Spring Boot MQTT Starter built on Eclipse Paho.
+		Supports auto configuration, publishers, subscribers, JSON conversion,
+		annotation-driven listeners and production-ready messaging.
+	</description>
+	<url>
+		https://github.com/rksptl/mqtt-framework
+	</url>
 	<licenses>
-		<license />
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
 	<developers>
-		<developer />
+
+		<developer>
+
+			<id>rksptl</id>
+
+			<name>Rakesh Patel</name>
+
+			<email>mr.rakesh@hotmail.com</email>
+
+			<organization>RKP Framework</organization>
+
+			<organizationUrl>
+				https://github.com/rksptl
+			</organizationUrl>
+
+		</developer>
+
 	</developers>
 	<scm>
-		<connection />
-		<developerConnection />
-		<tag />
-		<url />
+
+		<connection>
+			scm:git:git://github.com/rksptl/mqtt-framework.git
+		</connection>
+
+		<developerConnection>
+			scm:git:ssh://github.com:rksptl/mqtt-framework.git
+		</developerConnection>
+
+		<url>
+			https://github.com/rksptl/mqtt-framework
+		</url>
+
+		<tag>HEAD</tag>
+
 	</scm>
 	<properties>
+
 		<java.version>21</java.version>
+
+		<maven.compiler.release>21</maven.compiler.release>
+
+		<project.build.sourceEncoding>
+			UTF-8
+		</project.build.sourceEncoding>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -75,6 +119,65 @@
 				<configuration>
 					<skip>true</skip>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.14.0</version>
+				<configuration>
+					<release>21</release>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.3.1</version>
+
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.11.2</version>
+
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>3.2.7</version>
+
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
