@@ -52,13 +52,12 @@ public class JsonMessageConverter {
 	}
 
 	/**
-	 * Converts JSON into a Java object.
+	 * Converts a JSON payload into the specified Java object.
 	 *
-	 * @param json JSON payload
-	 * @param type Target class
-	 * @param <T>  Payload type
-	 * @return Java object
-	 * @throws DeserializationException if conversion fails
+	 * @param payload JSON payload
+	 * @param type target class
+	 * @param <T> target type
+	 * @return deserialized object
 	 */
 	public <T> T fromJson(String payload, Class<T> type) {
 
