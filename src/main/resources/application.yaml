@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: mqtt-framework
+
+mqtt:
+    enabled: true
+    broker-url: tcp://localhost:31884
+    client-id: test-client
+    username:
+    password:
+    clean-session: true
+    automatic-reconnect: true
+    connection-timeout: 30
+    keep-alive-interval: 60
+    qos: 1
+    retained: false
